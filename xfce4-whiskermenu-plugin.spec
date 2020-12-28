@@ -1,17 +1,17 @@
 Summary:	Alternate application launcher for Xfce
 Name:		xfce4-whiskermenu-plugin
-Version:	2.4.4
+Version:	2.5.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	7f6faf5ae5ca276d073798a3ff8b0e5b
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	e3aa9399704e0d6b1ec6a96498b98726
 URL:		http://git.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/
 BuildRequires:	cmake
-BuildRequires:	exo-devel >= 0.6.0
+BuildRequires:	exo-devel >= 0.11.0
 BuildRequires:	garcon-devel
-BuildRequires:	glib2-devel >= 1:2.30.2
-BuildRequires:	gtk+2-devel
+BuildRequires:	glib2-devel >= 1:2.50.2
+BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	libxfce4ui-devel >= 4.14.0
 BuildRequires:	libxfce4util-devel >= 4.14.0
 BuildRequires:	rpmbuild(macros) >= 1.601
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ie
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
 
 %find_lang %{name}
 
@@ -63,7 +63,6 @@ rm -rf $RPM_BUILD_ROOT
 %update_icon_cache hicolor
 
 %files -f %{name}.lang
-#%files
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_bindir}/xfce4-popup-whiskermenu
