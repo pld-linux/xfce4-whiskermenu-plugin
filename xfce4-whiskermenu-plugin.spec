@@ -1,11 +1,11 @@
 Summary:	Alternate application launcher for Xfce
 Name:		xfce4-whiskermenu-plugin
-Version:	2.6.2
+Version:	2.7.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	2bc8c0b368f9e524bea70b77a1d8858a
+Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.7/%{name}-%{version}.tar.bz2
+# Source0-md5:	41496da898448ae170c9ea4b2f13b059
 URL:		http://git.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/
 BuildRequires:	cmake
 BuildRequires:	exo-devel >= 0.11.0
@@ -68,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xfce4-popup-whiskermenu
 %attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libwhiskermenu.so
 %{_datadir}/xfce4/panel/plugins/whiskermenu.desktop
-%{_iconsdir}/hicolor/*/apps/xfce4-whiskermenu*
+%{_iconsdir}/hicolor/*/apps/org.xfce.panel.whiskermenu.*
 %{_mandir}/man1/xfce4-popup-whiskermenu.1*
