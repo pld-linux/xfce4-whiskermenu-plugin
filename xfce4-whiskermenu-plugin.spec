@@ -1,11 +1,11 @@
 Summary:	Alternate application launcher for Xfce
 Name:		xfce4-whiskermenu-plugin
-Version:	2.7.0
+Version:	2.7.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	41496da898448ae170c9ea4b2f13b059
+# Source0-md5:	902eaa51d8f8251b319d257f90b16c5d
 URL:		http://git.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/
 BuildRequires:	cmake
 BuildRequires:	exo-devel >= 0.11.0
