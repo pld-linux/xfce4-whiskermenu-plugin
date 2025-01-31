@@ -1,28 +1,28 @@
 Summary:	Alternate application launcher for Xfce
 Name:		xfce4-whiskermenu-plugin
-Version:	2.8.4
+Version:	2.9.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	0e40c55f6b677bd3528c3ac9a9b1cc08
+Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	2283dff5fd4cf6b10aecc4abf5847d40
 URL:		https://git.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/
 BuildRequires:	accountsservice-devel >= 0.6.45
 BuildRequires:	cmake
-BuildRequires:	exo-devel >= 0.12.0
+BuildRequires:	exo-devel >= 4.16.0
 BuildRequires:	garcon-devel >= 0.6.4
 BuildRequires:	glib2-devel >= 1:2.50.2
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	gtk-layer-shell-devel >= 0.7
-BuildRequires:	libxfce4ui-devel >= 4.14.0
-BuildRequires:	libxfce4util-devel >= 4.14.0
+BuildRequires:	libxfce4ui-devel >= 4.16.0
+BuildRequires:	libxfce4util-devel >= 4.16.0
 BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	xfce4-dev-tools >= 4.14.0
-BuildRequires:	xfce4-panel-devel >= 4.14.0
-BuildRequires:	xfconf-devel >= 4.14.0
+BuildRequires:	xfce4-dev-tools >= 4.16.0
+BuildRequires:	xfce4-panel-devel >= 4.16.0
+BuildRequires:	xfconf-devel >= 4.16.0
 Requires:	gtk-update-icon-cache
 Requires:	hicolor-icon-theme
-Requires:	xfce4-panel >= 4.14.0
+Requires:	xfce4-panel >= 4.16.0
 Suggests:	mugshot
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
