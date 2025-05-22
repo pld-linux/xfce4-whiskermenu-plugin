@@ -1,14 +1,15 @@
 Summary:	Alternate application launcher for Xfce
 Name:		xfce4-whiskermenu-plugin
-Version:	2.9.2
+Version:	2.10.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.9/%{name}-%{version}.tar.bz2
-# Source0-md5:	fb24725efebb68bd10b9d097b39d8ac3
+Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.10/%{name}-%{version}.tar.xz
+# Source0-md5:	b37d8bdbdf0611d9599a9b676e88719d
 URL:		https://git.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/
 BuildRequires:	accountsservice-devel >= 0.6.45
-BuildRequires:	cmake
+BuildRequires:	meson >= 0.54.0
+BuildRequires:	ninja
 BuildRequires:	exo-devel >= 4.16.0
 BuildRequires:	garcon-devel >= 0.6.4
 BuildRequires:	glib2-devel >= 1:2.50.2
@@ -39,18 +40,13 @@ launched from it.
 %setup -q
 
 %build
-mkdir -p build
-cd build
-%{cmake} \
-	..
-
-%{__make}
+%meson
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} -C build install \
-	DESTDIR=$RPM_BUILD_ROOT
+%meson_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
 
